@@ -29,4 +29,77 @@ Roles provide logical grouping of cookbooks and other roles. A sample role can b
 Getting Started
 -------------------------
 Now that you have the chef-repo ready to go, check out [Learn Chef](https://learn.chef.io/) to proceed with your workstation setup. If you have any questions about Chef you can always ask [our support team](https://www.chef.io/support/) for a helping hand.
-# Chef_AbridgeSol
+
+
+# Chef_AbridgeSol: Day #2
+
+##Chef: Day2
+
+Configuration management
+Other configuratoin management tools
+Companies requirement to choose which tool they have to use
+
+All these conf.mgmt tools known as infrastructure as code (IFAC)
+   -programatically provision and configure software components.
+   
+##Overview of Chef
+
+Chef development kit: it is used by who writes the cookbooks.
+Chef server: where all the recipes and cookbooks are reside.
+
+Node: machine which is managed by the chef server.
+      Every node machine has to configure so that to which chef server it has to connect and communicate.
+      Each node connects to only one chef server.
+
+Chef-client: it runs on all the nodes, it is a agent runs on all the chef nodes.
+             The nodes connects to the chef server on a regualr interval (default is every 30min)
+             Chef & puppet are pull model conf.mgmt tools.
+             
+Run-list : list of cookbooks that needs to be run on a node.
+roles: 
+Resource: everything that goes in a recipe is known as a resources.
+Search: searches a resource on a machine.
+
+Resource Types: Networking
+                Files
+                etc..
+                
+Organizations: Organization can be a project. The chef server should have atleast one organization.
+Role:  Types of server in your infrastructure. such as Load balancer, app server, db cache etc
+chef run maintains configuration drift ex: if the node is installed with a software which is not mentioned anywhere in the cookbook then the software will be removed.
+
+once you bootstrap node to chefserver then you cannot install anything manually on that node.
+ 
+knife: interface between chef-server and workstation.
+
+----------------POST TEA BREAK-----------------
+
+Work Station Setup:
+   Login to the chef enterprise
+   install chefdk on the workstation
+   login to the chef.io and setup a hosted chef server.
+   get a vm or physical machine to use as a chef node.
+   Here we are using an aws instance as a chef node
+   
+-----------------------
+aws: eruser003@gmail.com
+eruser3@2012
+------------------------
+
+Bootstraping a Node:
+-------------------------
+ # knife bootstrap <ip addr of node>13.232.192.235 --ssh-user <user name>ubuntu --sudo --identity-file <aws pem key>Pavan.pem --node-n
+ame shiva-ubuntu
+   "bootstrapping a node means adding a node to the chef server so that the cookbooks can be run on that node through the chef server"
+   
+  Ohai: system profile
+  
+  -->cat /etc/chef/client.rb
+  add this line ``` log_level  :info ```
+  
+  What's a cookbook?
+      A cookbook is like a "package" for chef recipes
+      It contains all the recipes, files, templates etc
+      "chef generate cookbook apache"
+      
+  **Resources are executed in order
