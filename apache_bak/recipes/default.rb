@@ -12,8 +12,7 @@ service "apache2" do             #here service is resource type and apache2 is t
     action [ :enable, :start ]
 end
 
-node.default["apache"]["indexfile"] = "index2.html"
 cookbook_file "/var/www/html/index.html" do  #here cookbook_file is resource type and /var/www/html/index.html is resource name
-    source node["apache"]["indexfile"]
+    source "index.html"
     mode "0644"
 end
