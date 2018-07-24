@@ -102,4 +102,12 @@ ame shiva-ubuntu
       It contains all the recipes, files, templates etc
       "chef generate cookbook apache"
       
-  **Resources are executed in order
+  **Resources are executed in order**
+  
+  Multiphase Execution-Compile phase
+  --During compile phase, Chef
+        *Loads all cookbooks from Run list
+        *Reads all Recipes to build resource collection
+The order of runlist is mandatory in cookfook fie.
+
+Resource Collection:
