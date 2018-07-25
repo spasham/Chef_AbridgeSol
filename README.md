@@ -122,3 +122,22 @@ Problem Statement:
 ------------------------------------
 https://github.com/kisshore/chef
 ----------------------------------------
+
+
+
+Data bag: A data bag can contain for items that represent info about your infrastructure that is not tied to single node
+ex: users, groups, applicatiion release information
+
+Every cookbook has to go through these:     create cookbook
+                                            upload cookbook
+                                            add to run list
+                                            chef run
+                                            
+                                            
+ ##Roles:
+ 
+ -webservers
+ -dbservers
+ -monitoring
+ 
+ 
