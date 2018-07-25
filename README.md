@@ -111,3 +111,14 @@ ame shiva-ubuntu
 The order of runlist is mandatory in cookfook fie.
 
 Resource Collection:
+
+
+Attribute precedence: attribute-->recipe-->environment-->
+
+##Day-3
+
+Problem Statement:
+
+------------------------------------
+https://github.com/kisshore/chef
+----------------------------------------
