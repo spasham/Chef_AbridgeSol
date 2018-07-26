@@ -22,12 +22,18 @@
   
   knife search groups "*:*"                  #to search the groups
   
-  
-  
   knife role from file .\webserver.rb      #updating the role to the chef server
   
   knife role show webserve                   #to display the role.
   
   knife search node "role:webserver" -a apache.sites #searching the nodes based on role
+  
+  knife role from file base.rb               #Updating the role base to the chef server
+  
+  knife environments list                    #to list the available environments.
+  
+  knife environment from file dev.rb         #to push the environment to the chefserver
+  
+  
   
   
