@@ -1,6 +1,6 @@
 <% if @port != 80 -%>
-  Listen <%= @port %>
-<% end -%>
+  Listen <%= @port -%>
+<% end %>
 
 <VirtualHost *:<%= @port %>>
     ServerAdmin webmaster@localhost
@@ -17,4 +17,4 @@
         allow from all
         Require all granted
     </Directory>
-<VirtualHost>
+</VirtualHost>

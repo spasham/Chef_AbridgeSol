@@ -30,7 +30,7 @@ node["apache"]['sites'].each do |site_name, site_data|
                         variables ({
                                 "document_root" => document_root,
                                 "port" => site_data["port"]
-                            })
+                        })
                 end
     #notifies :restart, service["apache2"] 
 
