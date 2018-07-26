@@ -140,4 +140,25 @@ Every cookbook has to go through these:     create cookbook
  -dbservers
  -monitoring
  
+ ###Base Role:
  
+ we can include run list in the base role.
+ 
+ ##Environments:
+ An organization could have multiple environments.
+ ex: Dev
+     Test
+     Staging
+     Prod
+     etc..
+     
+ ##Chef Supermarket
+    A communitry site where a huge number of pre-written cookbooks are available for free.
+    use knife to work with the dhef supermarket site API
+    download, extract, examine and implement cookbooks from the chef supermarket.
+    
+###CHEF SOLO
+###CHEF KITCHEN
+###CHEF APPLY
+###HABITAT
+###CHEF AUTOMATE
